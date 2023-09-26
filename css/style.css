@@ -1,0 +1,55 @@
+.bgcol{
+    background-color:  #90EE90;
+    text-align: center;
+  
+    height: 70px;
+    width: 100%;
+    color: white;
+    
+}
+.foot{
+    background-color:  #90EE90;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    color: white;
+    
+}
+
+.homepage
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homebtn{
+    margin-top: 160px;
+    margin-left: 5px;
+}
+.centere{
+    align-items: center;
+    margin-left: 35%;
+}
+.wi50{
+    width: 50%;
+}
+
+.mt10{
+    margin-top: 10px;
+    
+}
+.form-control.success input{
+outline: 0px;
+border-color: #90EE90;
+}
+
+.center_align{
+   display: inline;
+    justify-content: center;
+    align-items: center;
+  
+}
+  

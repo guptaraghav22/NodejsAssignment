@@ -1,0 +1,22 @@
+<%- include('../Headers/Result_Display_Page_Header.ejs')%>
+
+<form style="justify-content: center" action="#" class="container" >
+    <div class="form-group centere">
+        <label  class="mt10">Rollno :</label>
+        <label  class="mt10"><%= userinfo[0].Roll_no %></label>
+    </div>
+    
+    <div class="form-group centere">
+        <label  class="mt10">Name :</label>
+        <label  class="mt10"><%= userinfo[0].Name %></label>
+    </div>
+    <div class="form-group centere">
+        <label  class="mt10">Date Of Birth :</label>
+        <label  class="mt10"><%= userinfo[0].Dob %></label>
+    </div><div class="form-group centere">
+        <label  class="mt10">Score :</label>
+        <label  class="mt10"><%= userinfo[0].Score %></label>
+    </div>
+      
+  </form>
+<%- include('../Footers/Result_Display_Page_Footer.ejs')%>

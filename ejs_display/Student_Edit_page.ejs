@@ -1,0 +1,49 @@
+<%- include('../Headers/Student_Edit_Page_Header')%>
+<div class="container center_align"  >
+    <form id="edit-student" method="put"  style="margin-left: 30%;">
+        <h1 style="margin-left: 20%;">EDIT-STUDENT</h1>
+        <div class="row mb-3" style="margin-top: 20px;">
+            <label class="col-sm-2 col-form-label">Roll-No:</label>
+            <div class="col-sm-6">
+                <input type="text" name="Roll_no" readonly value="<%= userinfo[0].Roll_no%>" class="form-control"  placeholder="Roll-No">
+            </div>
+        </div>
+        <div class="row mb-3" >
+            <label  class="col-sm-2 col-form-label">Name:</label>
+            <div class="col-sm-6">
+                <input type="text"  name="Name" class="form-control" value="<%= userinfo[0].Name%>"  placeholder="Name">
+            </div>
+        </div>
+        <div class="row mb-3" >
+            <label  class="col-sm-2 col-form-label">Date-Of-Birth:</label>
+            <div class="col-sm-6">
+                <input type="Date" value="<%= userinfo[0].Dob%>"  name="dob" class="form-control"  placeholder="Name">
+            </div>
+        </div>
+        <div class="row mb-3" >
+            <label  class="col-sm-2 col-form-label">Score:</label>
+            <div class="col-sm-6">
+                <input type="text"  name="Score" class="form-control" value="<%= userinfo[0].Score%>"  placeholder="Score">
+            </div>
+        </div>
+        <% if(typeof e !='undefined'){%>
+            <% e.forEach(function(error){%>
+            
+                <strong style="color: red;"><%=error%></strong> 
+              
+              <% }) %>
+              <% } %>
+        
+        
+        <div class="row mb-3">
+            <div class="col-sm-11 offset-sm-2">
+                
+                    <button type="submit" class="btn btn-primary col-sm-6">Edit</button>
+                
+            </div>
+        </div>
+        
+  
+    </form>
+</div>
+<%- include('../Footers/Student_Edit_Page_Footer')%>

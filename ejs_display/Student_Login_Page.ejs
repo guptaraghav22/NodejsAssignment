@@ -1,0 +1,21 @@
+<%- include('../Headers/Student_Login_Page_Header.ejs')%>
+<form style="justify-content: center" action="/student-result" class="container" method="post">
+    <div class="form-group centere">
+      <label for="exampleInputEmail1" class="mt10">Date Of Birth</label>
+      <input type="Date" class="form-control wi50 mt10" 
+       name="dob" style="width: 50%;" id="exampleInputEmail1" 
+        aria-describedby="emailHelp" placeholder="Date Of Birth">
+      <small>Error Message</small>
+    </div>
+    <div class="form-group centere">
+      <label for="exampleInputPassword1" class="mt10" style="display: block;">Roll No</label>
+      <input type="password" class="form-control mt10 " 
+      name="rollno" style="width: 50%;" id="exampleInputPassword1"
+       placeholder="Roll no">
+       <small>Error Message</small>
+      </div>
+    <div class="form-group centere mt10">
+      <button type="submit" class="btn btn-primary wi50">Check Result</button>
+      </div>
+  </form>
+<%- include('../Footers/Student_Login_Page_Footer.ejs')%>

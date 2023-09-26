@@ -1,0 +1,31 @@
+<%- include('../Headers/Teacher_Display_Header')%>
+<a class="fa-solid fa-user-plus" href="/Add-Student" style="margin-top: 20px; margin-left:20px;text-decoration: none;color: black;">ADD STUDENTS</a>
+<a class="fa-solid fa-right-from-bracket" href="/teacher-display/teacher-logout" style="margin-left: 90%;margin-top: 0px; color: black;"> Log-Out</a>
+<table class="table table-striped "style="margin-top: 20px">
+     <!-- <h1><%= locals.user%></h1>
+      -->
+     <thead>
+      <tr>
+        <th scope="col">Roll-No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date-Of-Birth</th>
+        <th scope="col">Score</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% for(let i = 0 ; i<student_data.length;i++){%>
+            <tr>
+                <th scope="row"><%= student_data[i].Roll_no %></th>
+                <td><%= student_data[i].Name %></td>
+                <td><%= student_data[i].Dob %></td>
+                <td><%= student_data[i].Score %></td>
+                <td><a class="fa-solid fa-pen-to-square" method="get" href="/edit/<%=student_data[i].Roll_no %>"></a>
+                    <a class="fa-sharp fa-solid fa-trash delete" href="/teacher-display"  roll-no=<%=student_data[i].Roll_no %>></a></td>
+                <td></td>
+              </tr>
+        <%} %>
+    
+    </tbody>
+  </table>
+  <%- include('../Footers/Teacher_Display_Footer')%>

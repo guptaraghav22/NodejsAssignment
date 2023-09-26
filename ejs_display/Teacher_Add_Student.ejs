@@ -1,0 +1,56 @@
+<%- include('../Headers/Teacher_Add_Student_Header.ejs')%>
+<a class="fa-solid fa-backward-fast" href="/teacher-display" style="margin-left: 90%;text-decoration: none;color: black;"> BACK</a>
+<div class="container center_align">
+        <form id="add-student" action="/save-stu"  method="post" style="margin-left: 30%;">
+           
+            <h1 style="margin-left: 20%;">ADD-STUDENT</h1>
+            <div class="row mb-3" style="margin-top: 20px;">
+                <label class="col-sm-2 col-form-label">Roll-No:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="Roll_no" class="form-control" placeholder="Roll-No">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">Name:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="Name" class="form-control" placeholder="Name">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">Date-Of-Birth:</label>
+                <div class="col-sm-6">
+                    <input type="Date" name="dob" class="form-control" placeholder="Name">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">Score:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="Score" class="form-control" placeholder="Score">
+                </div>
+            </div>
+           
+            <% if(typeof e !='undefined'){%>
+                <% e.forEach(function(error){%>
+                
+                    <strong style="color: red;"><%=error.msg%></strong> 
+                  
+                  <% }) %>
+                  <% } %>
+                
+            <% if(typeof error !='undefined'){%>
+                
+                    <strong style="color: red;"><%=error%></strong> 
+                  
+                  
+                  <% } %>
+            <div class="row mb-3">
+                <div class="col-sm-11 offset-sm-2">
+                    <!-- <button type="submit" class="btn btn-primary col-sm-6">Add</button> -->
+                    <button type="submit" class="btn btn-primary col-sm-6">Add</a>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+    <%- include('../Footers/Teacher_Add_Student_Footer.ejs')%>
